@@ -407,6 +407,7 @@ void Output_save_file(FILE *fd)
 		// output 16-bit load address in little-endian byte order
 		putc(start & 255, fd);
 		putc(start >> 8, fd);
+		break;
 	case OUTPUT_FORMAT_HEX:
 		PLATFORM_SETFILETYPE_HEX(output_filename);
 		outputHex(start, start + amount, fd);
